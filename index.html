@@ -43,32 +43,86 @@
   </section>
 
  <!-- Sobre mí -->
-<section id="sobre-mi" class="py-5 reveal">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Imagen -->
-      <div class="col-md-5 mb-4 mb-md-0">
-        <div class="about-img-wrapper shadow-sm">
-          <img src="fotoperfil.jpeg" alt="Sobre mí" class="img-fluid rounded">
-        </div>
-      </div>
+/* ======= SECCIÓN SOBRE MÍ (actualizada) ======= */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
 
-      <!-- Texto -->
-      <div class="col-md-7">
-        <h2 class="fw-bold mb-3 text-rose">Quién soy</h2>
-        <h4 class="fw-semibold mb-4">Desarrolladora web junior y estudiante avanzada de Sistemas</h4>
-        <p class="lead">
-          Soy una apasionada del desarrollo web y el diseño digital. Me motiva combinar la lógica de la
-          programación con la creatividad del diseño para crear experiencias visuales simples, intuitivas y funcionales.
-        </p>
-        <p>
-          Busco mi primera experiencia laboral en el área IT, aplicando mis conocimientos en PHP, JavaScript, HTML, CSS,
-          SQL y CodeIgniter, mientras continúo perfeccionando mis habilidades técnicas y estéticas.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+/* Imagen */
+#about img {
+  width: 320px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.02);
+}
+
+/* Contenedor de texto */
+#about .about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+#about h2 {
+  font-size: 1.8rem;
+  color: #e58fa4;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.8rem;
+}
+
+#about h3 {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+#about p strong {
+  color: #d7748e;
+  font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about img {
+    width: 280px;
+    height: 340px;
+  }
+
+  #about .about-text {
+    padding-top: 1rem;
+  }
+}
+
   
   <!-- Habilidades -->
   <section id="habilidades" class="py-5 bg-light reveal">
