@@ -1,0 +1,81 @@
+:root {
+  --rose: #e8a2b8;
+  --text-dark: #333;
+  --bg-light: #f9f9f9;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+.text-rose {
+  color: var(--rose);
+}
+
+/* Botones */
+.btn-rose {
+  background-color: var(--rose);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-rose:hover {
+  background-color: #d68aa4;
+  transform: scale(1.03);
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skills hover */
+.skill i {
+  color: var(--rose);
+  transition: transform 0.3s ease;
+}
+.skill:hover i {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-light);
+}
+
+/* Navbar blur */
+.navbar {
+  backdrop-filter: blur(6px);
+}
