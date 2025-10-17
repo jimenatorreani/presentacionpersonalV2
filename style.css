@@ -1,280 +1,68 @@
-/* ======= ESTILO GENERAL ======= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Paleta neutra + rosado */
+:root {
+  --rose: #e8a2b8;
+  --text-dark: #333;
+  --bg-light: #f9f9f9;
 }
 
+/* General */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f8f9;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: white;
+  scroll-behavior: smooth;
 }
 
-/* ======= ENCABEZADO ======= */
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+h1, h2, h3 {
+  color: var(--text-dark);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem 2rem;
+.text-rose {
+  color: var(--rose);
 }
 
-nav .logo {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: #e58fa4; /* rosado suave */
-  letter-spacing: 1px;
+/* Botones personalizados */
+.btn-rose {
+  background-color: var(--rose);
+  color: white;
+  border: none;
+  transition: 0.3s ease;
+}
+.btn-rose:hover {
+  background-color: #d68aa4;
+  color: white;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(6px);
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: 0.3s;
+/* Secciones */
+section {
+  padding-top: 80px;
 }
 
-nav ul li a:hover {
-  color: #e58fa4;
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+}
+.card-title {
+  color: var(--rose);
 }
 
-/* ======= SECCIÓN INICIO ======= */
-#inicio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 6rem 2rem;
-  background: linear-gradient(180deg, #fff, #fcecf0);
+/* Íconos de habilidades */
+#habilidades i {
+  display: block;
+  margin-bottom: 8px;
 }
-
-#inicio h1 {
-  font-size: 2.2rem;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-#inicio p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 600px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1.8rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 30px;
-  background-color: #e58fa4;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: #d7748e;
-}
-
-/* ======= SECCIÓN PROYECTOS ======= */
-#proyectos {
-  background-color: #fff;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-#proyectos h2 {
-  font-size: 2rem;
-  color: #e58fa4;
-  margin-bottom: 2rem;
-}
-
-.proyectos-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.proyecto {
-  background: #fcecf0;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  transition: 0.3s;
-}
-
-.proyecto:hover {
-  transform: translateY(-5px);
-}
-
-.proyecto h3 {
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.proyecto p {
+#habilidades p {
   font-size: 0.95rem;
-  color: #555;
+  margin: 0;
 }
 
-/* ======= HABILIDADES ======= */
-#habilidades {
-  padding: 4rem 2rem;
-  background: linear-gradient(180deg, #fff, #fcecf0);
-  text-align: center;
-}
-
-#habilidades h2 {
-  font-size: 2rem;
-  color: #e58fa4;
-  margin-bottom: 2rem;
-}
-
-.skills-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.skills-icons i {
-  font-size: 2rem;
-  color: #e58fa4;
-  background: #fff;
-  border-radius: 50%;
-  padding: 1rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* ======= CONTACTO ======= */
-#contacto {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-#contacto h2 {
-  font-size: 2rem;
-  color: #e58fa4;
-  margin-bottom: 1rem;
-}
-
-#contacto p {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 1rem;
-}
-
-#contacto a {
-  color: #d7748e;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* ======= FOOTER ======= */
+/* Footer */
 footer {
-  background-color: #fff;
-  padding: 1.5rem;
-  text-align: center;
-  color: #777;
-  border-top: 1px solid #eee;
-  font-size: 0.9rem;
-}
-
-/* ======= SECCIÓN SOBRE MÍ (actualizada) ======= */
-#about {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 6rem auto;
-  padding: 2rem 3rem;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
-}
-
-/* Imagen */
-#about img {
-  width: 320px;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-#about img:hover {
-  transform: scale(1.02);
-}
-
-/* Contenedor de texto */
-#about .about-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-#about h2 {
-  font-size: 1.8rem;
-  color: #e58fa4;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.8rem;
-}
-
-#about h3 {
-  font-size: 1.3rem;
-  color: #333;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-#about p {
-  color: #555;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  font-weight: 400;
-}
-
-#about p strong {
-  color: #d7748e;
-  font-weight: 600;
-}
-
-/* Responsivo */
-@media (max-width: 900px) {
-  #about {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #about img {
-    width: 280px;
-    height: 340px;
-  }
-
-  #about .about-text {
-    padding-top: 1rem;
-  }
+  background-color: var(--bg-light);
 }
