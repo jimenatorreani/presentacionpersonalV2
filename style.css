@@ -18,7 +18,7 @@ h1, h2, h3 {
 }
 
 .text-rose {
-  color: var(--rose);
+  color: var(--text-light);
 }
 
 /* Botones personalizados */
