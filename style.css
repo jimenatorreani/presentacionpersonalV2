@@ -17,8 +17,9 @@ h1, h2, h3 {
   color: var(--text-dark);
 }
 
+/*Texto del título de cada sección*/
 .text-rose {
-  color: var(--text-light);
+  color: var(--rose);
 }
 
 /* Botones personalizados */
