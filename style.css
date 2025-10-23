@@ -53,6 +53,17 @@ section {
   color: var(--rose);
 }
 
+#sobre-mi img {
+  border: 3px solid #e83e8c;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre-mi img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(232, 62, 140, 0.4);
+}
+
+
 /* Íconos de habilidades */
 #habilidades i {
   display: block;
